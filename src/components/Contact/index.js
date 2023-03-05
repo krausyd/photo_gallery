@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 
 const ContactForm = () => {
-    const [formState, setFormState] = useState({name: '', email: '', message: ''});
+    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const [errorMessage, setErrorMessage] = useState('');
-    const {name, email, message} = formState;
+    const { name, email, message } = formState;
 
     const handleChange = (e) => {
         if (e.target.name === 'email') {
@@ -21,7 +21,7 @@ const ContactForm = () => {
             }
         }
         if (!errorMessage) {
-            setFormState({...formState, [e.target.name]: e.target.value});
+            setFormState({ ...formState, [e.target.name]: e.target.value });
         }
     };
 
@@ -48,6 +48,11 @@ const ContactForm = () => {
                 </div>
                 <button type="submit">Send</button>
             </form>
+            {errorMessage && (
+                <div>
+                    <p className="error-text">{errorMessage}</p>
+                </div>
+            )}
         </section>
     );
 };
