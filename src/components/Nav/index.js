@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 const Nav = ({categories, currentCategory, setCurrentCategory}) => {
+    useEffect(() => {
+        document.title = `Photo Gallery: ${capitalizeFirstLetter(currentCategory.name)}`;
+    }, [currentCategory]);
 
     return (
         <header>
