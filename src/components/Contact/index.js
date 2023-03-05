@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     return (
         <section>
-            <h1>Contact me</h1>
+            <h1 data-testid="h1tag">Contact me</h1>
             <form id="contact-form" onSubmit={submitData}>
                 <div>
                     <label htmlFor="name">Name:</label>
@@ -46,7 +46,7 @@ const ContactForm = () => {
                     <label htmlFor="message">Message:</label>
                     <textarea name="message" rows="5" defaultValue={message} onChange={handleChange} />
                 </div>
-                <button type="submit">Send</button>
+                <button data-testid="contactButton" type="submit">Send</button>
             </form>
             {errorMessage && (
                 <div>
