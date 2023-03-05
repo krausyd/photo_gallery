@@ -25,14 +25,26 @@ function App() {
     },
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [isContactSelected, setIsContactSelected] = useState(false);
 
   return (
     <div>
-      <Nav categories={categories} setCurrentCategory={setCurrentCategory} currentCategory={currentCategory} />
+      <Nav 
+        categories={categories} 
+        setCurrentCategory={setCurrentCategory} 
+        currentCategory={currentCategory}
+        isContactSelected={isContactSelected}
+        setIsContactSelected={setIsContactSelected} />
       <main>
-        <ContactForm />
-        <Gallery currentCategory={currentCategory} />
-        <About />
+        {isContactSelected ? 
+          (<ContactForm />) :
+          (
+            <>
+              <Gallery currentCategory={currentCategory} />
+              <About />
+            </>
+          )
+        }
       </main>
     </div>
   );
