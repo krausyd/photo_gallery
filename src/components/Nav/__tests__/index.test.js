@@ -21,7 +21,7 @@ describe('Nav component', () => {
 
     //snapshot test
     it('matches snapshot', () => {
-        const { asFragment } = render(<Nav categories={categories} setCurrentCategory={mockSetCurrentCategory} currentCategory={mockCurrentCategory} />);
+        const { asFragment } = render(<Nav categories={categories} setCurrentCategory={mockSetCurrentCategory} currentCategory={mockCurrentCategory} isContactSelected={mockIsContactSelected} setIsContactSelected={mockSetIsContactSelected} />);
         expect(asFragment()).toMatchSnapshot();
     });
 
