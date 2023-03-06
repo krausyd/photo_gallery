@@ -3,7 +3,7 @@ import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import PhotoList from '..';
 
-afterAll(cleanup);
+afterEach(cleanup);
 
 describe('PhotoList tests', () => {
     it('renders', () => {
