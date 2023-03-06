@@ -2,7 +2,7 @@
   "name": "photo-gallery",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "http://krausyd.github.io/photo-gallery",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "fsevents": "^2.3.2",
@@ -12,6 +12,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.8.0",
-    "@testing-library/react": "^9.5.0"
+    "@testing-library/react": "^9.5.0",
+    "gh-pages": "^5.0.0"
   }
 }
