@@ -2,7 +2,7 @@
   "name": "photo-gallery",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://krausyd.github.io/photo-gallery",
+  "homepage": "http://krausyd.github.io/photo_gallery",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "fsevents": "^2.3.2",
